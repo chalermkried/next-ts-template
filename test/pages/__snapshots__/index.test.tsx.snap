@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <header>
+      <nav>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+         | 
+        <a
+          href="/about"
+        >
+          About
+        </a>
+         | 
+      </nav>
+    </header>
+    <h1>
+      Hello Next.js 👋
+    </h1>
+    <p>
+      <a
+        href="/about"
+      >
+        About
+      </a>
+    </p>
+    <footer>
+      <hr />
+      <span>
+        Footer Here
+      </span>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,10 @@
+/.husky
+/.vscode
+/out
+/coverage
+/node_modules
+/public
+
+# Config files
+.eslintrc.js
+next.config.js
