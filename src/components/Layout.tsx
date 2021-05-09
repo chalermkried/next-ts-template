@@ -1,11 +1,20 @@
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { styled } from '@compiled/react';
 
 interface Props {
   children: ReactNode;
   title?: string;
 }
+
+const Header = styled.header`
+  margin-bottom: 20px;
+`;
+
+const Footer = styled.footer`
+  margin-top: 20px;
+`;
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <div>
@@ -14,7 +23,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
+    <Header>
       <nav>
         <Link href="/">
           <a>Home</a>
@@ -25,12 +34,12 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         </Link>{' '}
         |{' '}
       </nav>
-    </header>
+    </Header>
     {children}
-    <footer>
+    <Footer>
       <hr />
       <span>Footer Here</span>
-    </footer>
+    </Footer>
   </div>
 );
 

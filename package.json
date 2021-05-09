@@ -29,6 +29,8 @@
   "devDependencies": {
     "@commitlint/cli": "12.1.1",
     "@commitlint/config-conventional": "12.1.1",
+    "@compiled/react": "0.6.10",
+    "@compiled/webpack-loader": "0.6.15",
     "@next/bundle-analyzer": "10.2.0",
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.5",

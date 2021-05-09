@@ -1,9 +1,14 @@
 import Link from 'next/link';
 import Layout from 'components/Layout';
+import { styled } from '@compiled/react';
+
+const H1 = styled.h1`
+  font-weight: bold;
+`;
 
 const AboutPage = () => (
   <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
+    <H1>About</H1>
     <p>This is the about page</p>
     <p>
       <Link href="/">
