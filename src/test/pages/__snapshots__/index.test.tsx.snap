@@ -3,7 +3,14 @@
 exports[`Index should match snapshot 1`] = `
 <DocumentFragment>
   <div>
-    <header>
+    <style
+      data-cmpld="true"
+    >
+      ._otyrgktf{margin-bottom:20px}
+    </style>
+    <header
+      class="_otyrgktf"
+    >
       <nav>
         <a
           href="/"
@@ -19,7 +26,14 @@ exports[`Index should match snapshot 1`] = `
          | 
       </nav>
     </header>
-    <h1>
+    <style
+      data-cmpld="true"
+    >
+      ._k48p8n31{font-weight:bold}
+    </style>
+    <h1
+      class="_k48p8n31"
+    >
       Hello Next.js 👋
     </h1>
     <p>
@@ -29,7 +43,14 @@ exports[`Index should match snapshot 1`] = `
         About
       </a>
     </p>
-    <footer>
+    <style
+      data-cmpld="true"
+    >
+      ._19pkgktf{margin-top:20px}
+    </style>
+    <footer
+      class="_19pkgktf"
+    >
       <hr />
       <span>
         Footer Here

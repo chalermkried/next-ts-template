@@ -1,4 +1,4 @@
 {
-  "**/!(.*).{js,jsx,ts,tsx}": ["npm run lint", "npm run test:staged", "npm run prettier"],
+  "**/!(*.config).{js,jsx,ts,tsx}": ["npm run lint", "npm run test:staged", "npm run prettier"],
   "**/*.{json,md,html,css}": "npm run prettier",
 }

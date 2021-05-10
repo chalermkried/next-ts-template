@@ -1,5 +1,5 @@
 module.exports = {
-  collectCoverageFrom: ['{src,pages}/**/*.{ts,tsx,js,jsx}'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
   coverageThreshold: {
     global: {
       branches: 60,
@@ -12,11 +12,11 @@ module.exports = {
   moduleNameMapper: {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     'components/(.*)': '<rootDir>/src/components/$1',
-    'pages/(.*)': '<rootDir>/pages/$1',
-    'test/(.*)': '<rootDir>/test/$1',
+    'pages/(.*)': '<rootDir>/src/pages/$1',
+    'test/(.*)': '<rootDir>/src/test/$1',
   },
   roots: ['<rootDir>'],
-  setupFilesAfterEnv: ['<rootDir>/test/setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
   testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|.next|out)[/\\\\]'],
   transform: {
     '^.+\\.(ts|tsx)$': 'babel-jest',
