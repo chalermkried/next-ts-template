@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -15,7 +15,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "components/*": ["src/components/*"],
+      "components/*": ["components/*"],
       "pages/*": ["pages/*"],
       "test/*": ["test/*"]
     },
@@ -25,5 +25,5 @@
     "target": "esnext"
   },
   "exclude": ["node_modules", ".next", "out"],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"]
 }
