@@ -1,41 +1,58 @@
-# TypeScript Next.js example
+# Next.js Template - Targeted for client-side
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+The main aim of this template is to be able to start on **Client-side** only website as quick as possible with great DX.
 
-## Deploy your own
+## Template Structure
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- [Volta](https://docs.volta.sh/guide/) is supported and recommended for Node version management.
+- Bootstrapped with [Create Next App](https://nextjs.org/docs/api-reference/create-next-app) and its typescript template.
+- UI Library: targeted built app to be powered by [Preact](https://preactjs.com/) and use [React](https://reactjs.org/) for development for better debugging.
+- Styling: use [CompiledCSS](https://compiledcssinjs.com/), provides atomic css generation, with no runtime cost, on build and common development API, similar to other CSS in JS libraries.
+- Linting configuration based on [Create Exposed App](https://github.com/iamturns/create-exposed-app) with personal modification.
+- Editor - VSCode with format on save by [Prettier](https://prettier.io/) + fix all with [Eslint](https://eslint.org/).
+- Suggested Node version 14.
+- Git hook integrated with [Husky](https://typicode.github.io/husky).
+- Pre-commit #1: Uses [Commitlint](https://commitlint.js.org/) for consistent commit messages.
+- Pre-commit #2: Uses [Lint Staged](https://github.com/okonet/lint-staged) to run `npm run lint`, `npm run prettier` and `npm run test:staged` on staged files.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+## Available Scripts
 
-## How to use it?
+In the project directory, you can run:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+### `npm ci`
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
+Installs the packages.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### `npm start`
 
-## Notes
+Runs the **Next.js** development mode (SSR).\
+Open http://localhost:3000 to view it in the browser.
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
-npm install --save-dev typescript
-```
+### `npm test`
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+Launches the **Jest** test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+### `npm run test:ci`
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+Launches the **Jest** test runner and collect code coverage.\
+The coverage result will be in the `coverage` folder.
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+### `npm run build`
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+Builds the app for production to the `.next` folder.\
+It correctly bundles **Preact** in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.
+
+### `npm run export`
+
+Exports the build from `npm run build` step to a static web contents, enable client-side only deployment.
+The output will be in the `out` folder.
+
+### `npm run analyze`
+
+Builds the app in production mode and analyze the js bundles.
+The analysis result will be in `.next/analyze` folder.
