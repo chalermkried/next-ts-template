@@ -10,7 +10,7 @@ The main aim of this template is to be able to start on **Client-side** only web
 - Styling: use [CompiledCSS](https://compiledcssinjs.com/), provides atomic css generation, with no runtime cost, on build and common development API, similar to other CSS in JS libraries.
 - Linting configuration based on [Create Exposed App](https://github.com/iamturns/create-exposed-app) with personal modification.
 - Editor - VSCode with format on save by [Prettier](https://prettier.io/) + fix all with [Eslint](https://eslint.org/).
-- Suggested Node version 14.
+- Suggested Node version 16+.
 - Git hook integrated with [Husky](https://typicode.github.io/husky).
 - Pre-commit #1: Uses [Commitlint](https://commitlint.js.org/) for consistent commit messages.
 - Pre-commit #2: Uses [Lint Staged](https://github.com/okonet/lint-staged) to run `npm run lint`, `npm run prettier` and `npm run test:staged` on staged files.
