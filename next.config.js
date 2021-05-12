@@ -1,8 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
-const { CompiledExtractPlugin } = require('@compiled/webpack-loader');
+const withPlugins = require('next-compose-plugins');
+const nextPlugins = [];
+
+if (process.env.ANALYZE === 'true') {
+  nextPlugins.push(
+    require('@next/bundle-analyzer')({
+      enabled: true,
+    })
+  );
+}
 
 const nextConfig = {
   future: {
@@ -10,6 +15,7 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     const isNotDevMode = !dev;
+    const { CompiledExtractPlugin } = require('@compiled/webpack-loader');
 
     // NOTE: Ideal plan is to only extract css on prod build, but is blocked by an issue. (https://github.com/atlassian-labs/compiled/issues/388)
     config.module.rules.push({
@@ -34,4 +40,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withPlugins(nextPlugins, nextConfig);
